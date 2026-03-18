@@ -1,5 +1,15 @@
 import React from 'react';
 import '../styles/project-grid.css';
+import guldspy from "../assets/guldpsy.webp";
+import budgettoire from "../assets/budgettoire.webp";
+import litdao from "../assets/litdao.webp";
+import libtracker from "../assets/libtracker.webp";
+import brainwave from "../assets/brainwave.webp";
+import mascot from "../assets/mascot.webp";
+import search from "../assets/search.webp";
+import profile from "../assets/profile.webp";
+import Navbar from "../components/Navbar";
+import { title } from 'framer-motion/client';
 
 // You can eventually move this data to a separate file, but keeping it here for now!
 const projectsData = [
@@ -9,44 +19,71 @@ const projectsData = [
     category: "code",
     description: "A full-stack web application designed for seamless user experiences.",
     tech: ["React", "Node.js", "MongoDB"],
-    link: "#",
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800", 
+    link: "https://guldspy.vercel.app/",
+    image: guldspy, 
   },
   {
     id: 2,
     title: "Budgettoire",
     category: "code",
     description: "A personal finance tracker with clean data visualization.",
-    tech: ["JavaScript", "Express", "CSS"],
-    link: "#",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+    tech: ["React", "CSS"],
+    link: "https://budgettoire.vercel.app/",
+    image: budgettoire,
   },
   {
     id: 3,
-    title: "SearchFM",
+    title: "LitDAO",
     category: "code",
-    description: "A music discovery platform hooking into external APIs.",
-    tech: ["React", "Spotify API", "Tailwind"],
+    description: "A decentralized platform for literary collaboration and publishing.",
+    tech: ["React", "CSS"],
     link: "#",
-    image: "https://images.unsplash.com/photo-1614680376593-902f74cf0d41?auto=format&fit=crop&q=80&w=800",
+    image: litdao,
   },
   {
     id: 4,
-    title: "Katz Magazine",
-    category: "studio",
-    description: "An editorial deep-dive into digital culture and storytelling.",
-    role: "Writer & Editor",
-    link: "#",
-    image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&q=80&w=800",
+    title: "Katz Library Tracker",
+    category: "code",
+    description: "Track the books you read",
+    tech: ["React", "CSS"],
+    link: "https://library-tracker-zeta.vercel.app/",
+    image: libtracker,
   },
   {
     id: 5,
-    title: "Midnight Audio",
-    category: "studio",
-    description: "A podcast exploring the intersection of technology and art.",
-    role: "Producer & Host",
+    title: "Brainwave.io",
+    category: "code",
+    description: "A furniture store landing page",
+    tech: ["React", "CSS"],
     link: "#",
-    image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&q=80&w=800",
+    image: brainwave,
+  },
+  {
+    id: 6,
+    title: "Katz Magazine",
+    category: "studio",
+    description: "A literary magazine for poets, writers, and artists.",
+    role: ["Editor-in-Chief"],
+    link: "https://katzmagazine.substack.com/",
+    image: mascot,
+  },
+  {
+    id: 7,
+    title: "OAP at SearchFM",
+    category: "studio",
+    description: "Hosting weekly radio shows featuring music, interviews, and storytelling.",
+    role: ["On-Air Personality"],
+    link: "https://searchfm.ca/",
+    image: search,
+  },
+  {
+    id: 8,
+    title: "YouTube Channel",
+    category: "studio",
+    description: "Creating videos on lifestyle, digital culture, and personal growth.",
+    role: ["Content Creator"],
+    link: "https://www.youtube.com/@kaaahtea",
+    image: profile,
   }
 ];
 

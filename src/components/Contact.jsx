@@ -43,9 +43,9 @@ const Contact = () => {
               <p className="font-typewriter">The Internet</p>
               
               <div className="social-links font-handwritten">
-                <a href="https://github.com" target="_blank" rel="noreferrer">github</a>
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer">linkedin</a>
-                <a href="https://twitter.com" target="_blank" rel="noreferrer">twitter</a>
+                <a href="https://github.com/kattyd" target="_blank" rel="noreferrer">github</a>
+                <a href="https://www.linkedin.com/in/katrina-dawap-485535200/" target="_blank" rel="noreferrer">linkedin</a>
+                <a href="https://x.com/diretnan" target="_blank" rel="noreferrer">X</a>
               </div>
             </div>
           </div>
