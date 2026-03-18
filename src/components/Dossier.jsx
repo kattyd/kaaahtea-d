@@ -7,8 +7,8 @@ const Dossier = () => {
   const constraintsRef = useRef(null);
 
   const skills = [
-    'React', 'JavaScript', 'Node.js', 'Python', 'MongoDB', 
-    'CSS3 / HTML5', 'Figma', 'Git', 'Writing', 'Audio Production'
+    'React', 'JavaScript', 'Node.js', 'Python', 
+    'CSS3 / HTML5', 'Figma', 'Git', 'Writing', 'Video Editing', 'Podcasting/Radio Production'
   ];
 
   return (
