@@ -1,0 +1,198 @@
+/* contact.css */
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+/* --- THE POSTCARD --- */
+.postcard {
+  background-color: #fdfbf7;
+  width: 100%;
+  max-width: 800px;
+  padding: 3rem;
+  box-shadow: 10px 10px 30px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.05);
+  position: relative;
+  transform: rotate(1deg);
+  transition: transform 0.3s ease;
+}
+
+.postcard:hover {
+  transform: rotate(0deg);
+}
+
+.stamp {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  width: 60px;
+  height: 70px;
+  background-color: #d1495b;
+  border: 3px dashed #fdfbf7;
+  box-shadow: 0 0 0 2px #d1495b;
+}
+
+.postmark {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-size: 1.2rem;
+  color: #121212;
+  opacity: 0.6;
+  transform: rotate(-25deg);
+  border: 2px solid #121212;
+  border-radius: 50%;
+  padding: 15px 5px;
+}
+
+.postcard-content {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.postcard-left {
+  flex: 1.5;
+}
+
+.postcard-right {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 2rem;
+}
+
+.divider-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: #121212;
+  opacity: 0.2;
+}
+
+.text-large {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #d1495b;
+}
+
+/* --- THE FORM --- */
+.input-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.message-group {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-group label {
+  font-size: 1rem;
+  color: #4a4e69;
+}
+
+.input-group input, 
+.input-group textarea {
+  flex: 1;
+  min-width: 200px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #121212;
+  font-family: 'Caveat', cursive;
+  font-size: 1.8rem;
+  color: #121212;
+  padding: 0 5px;
+}
+
+.input-group textarea {
+  width: 100%;
+  resize: vertical;
+  line-height: 1.5;
+  background-image: linear-gradient(transparent, transparent calc(1.5em - 2px), #121212 0px);
+  background-size: 100% 1.5em; /* Lined paper effect for text area */
+  border-bottom: none;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+  outline: none;
+  border-bottom-color: #d1495b;
+}
+
+/* --- THE BUTTON --- */
+.send-btn {
+  background-color: #ccff00;
+  color: #121212;
+  border: 2px solid #121212;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.2s ease;
+  box-shadow: 4px 4px 0 #121212;
+}
+
+.send-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #121212;
+}
+
+/* --- ADDRESS & SOCIALS --- */
+.address-block h4 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.address-block p {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.social-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-links a {
+  color: #4a4e69;
+  text-decoration: none;
+  font-size: 1.8rem;
+  transition: color 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #d1495b;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .postcard-content {
+    flex-direction: column;
+  }
+  .postcard-right {
+    padding-left: 0;
+    padding-top: 2rem;
+  }
+  .divider-line {
+    width: 100%;
+    height: 2px;
+    top: 0;
+    left: 0;
+  }
+  .stamp, .postmark {
+    display: none;
+  }
+}

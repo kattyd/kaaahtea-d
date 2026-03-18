@@ -1,0 +1,14 @@
+/* footer.css */
+
+.scrapbook-footer {
+  text-align: center;
+  padding: 2rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  color: #4a4e69;
+  border-top: 2px dashed rgba(0,0,0,0.1);
+  margin-top: auto; /* This forces the footer to the absolute bottom of the page */
+  background-color: transparent;
+  position: relative;
+  z-index: 10;
+}

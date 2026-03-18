@@ -1,0 +1,224 @@
+/* hero.css */
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 90vh;
+  padding: 4rem 10%;
+  background-color: transparent; /* Let the global background show through */
+  position: relative;
+  color: #1a1a1a;
+  gap: 4rem; /* Adds breathing room between text and image */
+}
+
+/* --- LAYOUT CONTAINERS --- */
+.hero-content {
+  flex: 1; /* Takes up available space */
+  max-width: 600px;
+  position: relative;
+  z-index: 2;
+}
+.hero-content .kicker {
+  margin-bottom: 1rem;
+  transform: rotate(-2deg);
+}
+
+.hero-visuals {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform: rotate(3deg);
+  transition: transform 0.5s ease;
+  z-index: 2;
+}
+
+.hero-visuals:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+/* --- TYPOGRAPHY --- */
+.kicker {
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  color: #d1495b; 
+  margin-bottom: -1rem;
+  transform: rotate(-2deg);
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.heavy-sans {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(4rem, 8vw, 8rem); /* Responsive scaling */
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  color: #121212;
+  margin-bottom: .5rem;
+}
+
+.handwritten {
+  font-family: 'Caveat', cursive;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #4a4e69;
+  margin-left: 4rem;
+  margin-top: -2rem;
+}
+
+.hero-subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.block-text {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 800;
+  background-color: #ccff00; 
+  padding: 2px 10px;
+  border-radius: 4px;
+}
+
+.elegant-serif {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.hero-bio {
+  font-family: 'Space Mono', monospace; 
+  font-size: 1.1rem;
+  max-width: 500px;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+
+/* --- BUTTON --- */
+.scribble-btn {
+  font-family: 'Rubik', sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  background: transparent;
+  color: #121212;
+  border: 2px solid #121212;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px; 
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scribble-btn:hover {
+  background: #121212;
+  color: #f4f1eb;
+  transform: translateY(-3px);
+}
+
+/* --- POLAROID --- */
+.polaroid {
+  background: #fff;
+  padding: 15px 15px 40px 15px;
+  box-shadow: 5px 15px 30px rgba(0,0,0,0.15);
+  border-radius: 2px;
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+}
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  filter: contrast(1.1) sepia(0.2); 
+}
+
+.polaroid-caption {
+  font-family: 'Caveat', cursive;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 15px;
+  color: #333;
+}
+
+/* --- SCRAPBOOK ELEMENTS & POSITIONING --- */
+.tape {
+  position: absolute;
+  width: 120px;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  backdrop-filter: blur(2px);
+  border-left: 2px dashed rgba(0,0,0,0.1);
+  border-right: 2px dashed rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+/* This was missing! */
+.top-left {
+  top: 5%;
+  left: 5%;
+  transform: rotate(-15deg);
+}
+
+.tape-center {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 100px;
+  height: 30px;
+  background-color: rgba(245, 245, 220, 0.7);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.star-doodle {
+  position: absolute;
+  top: 15%;
+  right: 45%;
+  font-size: 3rem;
+  color: #ff9900;
+  font-family: 'Caveat', cursive;
+  animation: float 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+/* This was missing! */
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(10deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .hero-section {
+    flex-direction: column;
+    padding: 6rem 5%;
+    text-align: center;
+    gap: 2rem;
+  }
+  .hero-subtitle { 
+    justify-content: center; 
+  }
+  .hero-bio { 
+    margin: 0 auto 3rem auto; 
+  }
+  .handwritten { 
+    margin-left: 0; 
+  }
+  .polaroid { 
+    margin-top: 2rem; 
+  }
+  .star-doodle {
+    right: 10%;
+    top: 5%;
+  }
+}

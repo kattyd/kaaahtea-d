@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Space+Mono&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* This creates that subtle notebook grid/paper texture */
+  background-color: #f4f1eb; 
+  background-image: radial-gradient(#d5d5d5 1px, transparent 1px);
+  background-size: 20px 20px; 
+  color: #121212;
+  font-family: 'Rubik', sans-serif; /* Your trusty default font */
+  overflow-x: hidden; /* Prevents horizontal scrolling from absolute positioned doodles */
+}
+
+/* A wrapper to make sure the footer is always pushed to the bottom if content is short */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Some helpful utility classes for the mixed typography we'll use everywhere */
+.font-sans-heavy { font-family: 'Anton', sans-serif; }
+.font-handwritten { font-family: 'Caveat', cursive; }
+.font-serif-italic { font-family: 'Playfair Display', serif; font-style: italic; }
+.font-typewriter { font-family: 'Space Mono', monospace; }
+
+/* --- CUSTOM TEXT SELECTION --- */
+::selection {
+  background-color: #ccff00; /* Neon marker yellow */
+  color: #121212; /* Black text */
+  text-shadow: none; /* Removes any weird shadows when highlighted */
+}
+
+/* Fallback for Mozilla Firefox */
+::-moz-selection {
+  background-color: #ccff00;
+  color: #121212;
+  text-shadow: none;
+}

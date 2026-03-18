@@ -1,0 +1,77 @@
+/* home.css */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.content-section {
+  min-height: 60vh;
+  padding: 6rem 10%;
+  display: flex;
+  flex-direction: column;
+  
+  /* THIS IS MAGIC: It prevents your sticky navbar from covering the title when anchor scrolling */
+  scroll-margin-top: 80px; 
+}
+
+.section-header {
+  margin-bottom: 3rem;
+  border-bottom: 2px solid #121212;
+  padding-bottom: 1rem;
+  position: relative;
+}
+
+/* Let's add a little hand-drawn underline accent */
+.section-header::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 150px;
+  height: 4px;
+  background-color: #d1495b; /* That editorial red */
+  border-radius: 5px;
+  transform: rotate(-1deg);
+}
+
+.section-title {
+  font-size: 5rem;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: #121212;
+}
+
+.section-subtitle {
+  font-size: 2rem;
+  color: #4a4e69;
+  margin-top: -10px;
+  margin-left: 20px;
+}
+
+/* Temporary style just so you can see where the components will go */
+.placeholder-box {
+  width: 100%;
+  height: 200px;
+  border: 2px dashed #a0a0a0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content-section {
+    padding: 4rem 5%;
+  }
+  .section-title {
+    font-size: 3.5rem;
+  }
+  .section-subtitle {
+    font-size: 1.5rem;
+    margin-left: 0;
+  }
+}

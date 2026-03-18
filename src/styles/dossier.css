@@ -1,0 +1,132 @@
+/* dossier.css */
+
+.dossier-wrapper {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+  background: #fff;
+  padding: 3rem;
+  /* Brutalist / Editorial offset shadow */
+  border: 2px solid #121212;
+  box-shadow: 8px 8px 0px #121212; 
+  position: relative;
+  border-radius: 2px;
+}
+
+/* --- THE BIO (MAGAZINE STYLE) --- */
+.bio-column {
+  flex: 1.2;
+}
+
+.bio-text {
+  font-family: 'Space Mono', monospace; /* Typewriter vibe */
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.mt-3 {
+  margin-top: 1.5rem;
+}
+
+/* The giant magazine-style first letter */
+.drop-cap {
+  float: left;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 6rem;
+  line-height: 0.8;
+  padding-top: 8px;
+  padding-right: 12px;
+  padding-left: 4px;
+  color: #d1495b; /* Editorial Red */
+}
+
+.highlight-text {
+  background-color: #ccff00;
+  color: #121212;
+  font-weight: bold;
+  font-family: 'Rubik', sans-serif;
+  padding: 0 4px;
+}
+
+.scribble-signature {
+  font-size: 2.5rem;
+  color: #4a4e69;
+  margin-top: 2rem;
+  transform: rotate(-3deg);
+}
+
+/* --- THE TECH STACK (STICKER STYLE) --- */
+.stack-column {
+  flex: 1;
+  background-image: radial-gradient(#d5d5d5 1px, transparent 1px);
+  background-size: 15px 15px; /* Mini grid inside the box */
+  padding: 2.5rem 2rem;
+  border: 1px dashed rgba(0,0,0,0.2);
+  border-radius: 4px;
+  position: relative;
+}
+
+.stack-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #121212;
+}
+
+.stickers-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Dymo-label style stickers */
+.tech-sticker {
+  font-family: 'Space Mono', monospace;
+  background: #121212;
+  color: #f4f1eb;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 2px;
+  box-shadow: 2px 4px 8px rgba(0,0,0,0.2);
+  cursor: crosshair; /* Adds to the techy/tactile vibe */
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+/* Scatter effect */
+.sticker-tilt-0 { transform: rotate(-4deg); }
+.sticker-tilt-1 { transform: rotate(3deg); }
+.sticker-tilt-2 { transform: rotate(-2deg); }
+.sticker-tilt-3 { transform: rotate(5deg); }
+
+/* Snaps to attention on hover */
+.tech-sticker:hover {
+  transform: scale(1.1) rotate(0deg);
+  background: #d1495b; /* Turns red when you hover */
+  z-index: 10;
+}
+
+/* Tape piece for the top right of the whole box */
+.tape-top-right {
+  top: -15px;
+  right: -20px;
+  transform: rotate(45deg);
+  width: 100px;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .dossier-wrapper {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .stack-column {
+    width: 100%;
+  }
+}
