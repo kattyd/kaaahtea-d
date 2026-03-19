@@ -2,7 +2,7 @@
 
 > A maximalist, tactile portfolio and digital archive built for the web.
 
-**[View the Live Site Here](https://YOUR-VERCEL-URL.vercel.app/)** *(<- Replace with your actual Vercel link!)*
+**[View the Live Site Here](https://kaaahtea-d.vercel.app/)** 
 
 ---
 
