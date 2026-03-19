@@ -35,4 +35,4 @@ If you want to clone this repo and run it on your own machine:
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/kattyd/YOUR-REPO-NAME.git](https://github.com/kattyd/YOUR-REPO-NAME.git)
+   git clone [https://github.com/kattyd/kaaahtea-d.git](https://github.com/kattyd/kaaahtea-d.git)
