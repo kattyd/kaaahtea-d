@@ -1,16 +1,38 @@
-# React + Vite
+# 🎞️ Katrina | Digital Scrapbook
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A maximalist, tactile portfolio and digital archive built for the web.
 
-Currently, two official plugins are available:
+**[View the Live Site Here](https://YOUR-VERCEL-URL.vercel.app/)** *(<- Replace with your actual Vercel link!)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📖 About This Project
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project is a departure from the standard, ultra-minimalist developer portfolio. Coming from a background in video editing and multimedia, I wanted to build a digital experience that felt tactile, cinematic, and slightly chaotic—like a living, breathing editorial scrapbook. 
 
-## Expanding the ESLint configuration
+The site features custom CSS cinematic film grain, draggable elements, and a fully functional, database-driven blog.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚡ Tech Stack
+
+* **Framework:** React (via Vite)
+* **Database:** Firebase (Firestore)
+* **Routing:** React Router DOM
+* **Styling:** Custom Vanilla CSS (with SVG noise filters and mix-blend-modes)
+* **Content:** React Markdown
+* **Contact Pipeline:** Web3Forms API
+* **Analytics & Hosting:** Vercel
+
+## ✨ Key Features
+
+* **Cinematic UI:** A custom, animated SVG film grain overlays the entire application, utilizing `mix-blend-mode` to bite into the colors and create a 16mm analog feel.
+* **Live Archive (Blog):** A fully integrated Firestore database that dynamically fetches and renders articles.
+* **Markdown Support:** Blog posts are written in standard Markdown within the Firebase console and automatically parsed into styled HTML components on the frontend.
+* **Serverless Contact Form:** A custom digital postcard UI that securely routes messages directly to my inbox via Web3Forms, requiring zero backend architecture.
+
+## 🛠️ Run Locally
+
+If you want to clone this repo and run it on your own machine:
+
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/kattyd/YOUR-REPO-NAME.git](https://github.com/kattyd/YOUR-REPO-NAME.git)
