@@ -22,7 +22,7 @@ const Home = () => {
       <section id="code" className="content-section" data-aos="fade-up">
         <div className="section-header">
           <h2 className="section-title font-sans-heavy">THE CODE.</h2>
-          <p className="section-subtitle font-handwritten">things I've built with logic & caffeine.</p>
+          <p className="section-subtitle font-handwritten">built with coffee.</p>
         </div>
         <ProjectGrid category="code" />
       </section>
@@ -40,7 +40,7 @@ const Home = () => {
       <section id="dossier" className="content-section" data-aos="fade-up">
         <div className="section-header">
           <h2 className="section-title font-sans-heavy">THE DOSSIER.</h2>
-          <p className="section-subtitle font-handwritten">the human behind the screen.</p>
+          <p className="section-subtitle font-handwritten">who's behind the screen.</p>
         </div>
         <Dossier />
       </section>

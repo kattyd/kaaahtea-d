@@ -39,7 +39,7 @@
 
 /* --- LOGO --- */
 .logo a {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #121212;
   text-decoration: none;
   line-height: 1;
@@ -100,6 +100,23 @@
 .highlight-link:hover {
   background-color: #d1495b; /* Editorial red hover */
   color: white;
+}
+.darkroom-toggle {
+  background: #121212;
+  color: #ccff00;
+  border: none;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transform: rotate(2deg);
+  transition: all 0.2s ease;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+.darkroom-toggle:hover {
+  transform: rotate(0deg) scale(1.05);
+  background: #d1495b;
+  color: #fff;
 }
 
 /* Responsive */

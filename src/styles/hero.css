@@ -24,7 +24,8 @@
 }
 
 .hero-visuals {
-  flex: 1;
+  flex: 1; /* Takes up available space */
+  max-width: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,7 +34,6 @@
   transition: transform 0.5s ease;
   z-index: 2;
 }
-
 .hero-visuals:hover {
   transform: rotate(0deg) scale(1.02);
 }

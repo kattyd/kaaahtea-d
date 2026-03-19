@@ -38,7 +38,7 @@ const Contact = () => {
             <div className="address-block">
               <h4 className="font-sans-heavy">SEND TO:</h4>
               <p className="font-typewriter">Katrina (kaaahtea)</p>
-              <p className="font-typewriter">Full-Stack Dev &</p>
+              <p className="font-typewriter">Frontend Dev &</p>
               <p className="font-typewriter">Multimedia Creative</p>
               <p className="font-typewriter">The Internet</p>
               

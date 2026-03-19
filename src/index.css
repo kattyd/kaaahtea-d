@@ -46,3 +46,11 @@ main {
   color: #121212;
   text-shadow: none;
 }
+body.darkroom-mode {
+  filter: invert(1) hue-rotate(180deg);
+  background-color: #121212;
+  transition: filter 0.5s ease, background-color 0.5s ease;
+}
+body.darkroom-mode img {
+  filter: invert(1) hue-rotate(180deg) contrast(1.1) sepia(0.2);
+}

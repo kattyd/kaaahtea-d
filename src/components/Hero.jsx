@@ -1,17 +1,27 @@
 import React from "react";
 import "../styles/hero.css";
-// You can use your techImg or mediaImg here, or a new combined photo!
+import confetti from "canvas-confetti"
 import profilePic from "../assets/media-face.webp"; 
 
 const Hero = () => {
+  const triggerConfetti = () => {
+    confetti({
+      particleCount: 500,
+      spread: 300,
+      origin: { y: 0.5 },
+      colors: ['#ccff00', '#d1495b', '#121212']
+    });
+  };
   return (
     <section className="hero-section">
       {/* Decorative Scrapbook Elements */}
       <div className="tape top-left"></div>
-      <div className="star-doodle">✦</div>
+      <div className="star-doodle"
+            onClick={triggerConfetti}
+            style={{ cursor: 'pointer' }}>✦</div>
       
       <div className="hero-content">
-        <p className="kicker">hi, welcome to the digital scrapbook of</p>
+        <p className="kicker">hi, i'm</p>
         
         <h1 className="hero-title">
           <span className="heavy-sans">KATRINA</span>
@@ -19,12 +29,12 @@ const Hero = () => {
         </h1>
         
         <h2 className="hero-subtitle">
-          <span className="block-text">A FULL-STACK DEVELOPER</span> 
+          <span className="block-text">A FRONTEND DEVELOPER</span> 
           <span className="elegant-serif"> & multimedia storyteller.</span>
         </h2>
         
         <p className="hero-bio">
-          I build clean, thoughtful web experiences and craft stories through code, sound, and writing. Based in the intersection of logic and art.
+          I build clean web experiences and tell stories through code, video, and writing. Based in Jos.
         </p>
 
         <button className="scribble-btn">Explore my work ↗</button>

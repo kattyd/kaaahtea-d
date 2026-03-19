@@ -8,6 +8,8 @@ import ProjectGrid from './components/ProjectGrid';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import CustomCursor from './components/CustomCursor';
+import Blog from './pages/Blog';
+import Article from './pages/Articles';
 
 function App() {
   useEffect(() => {
@@ -32,6 +34,8 @@ function App() {
             
             {/* If we ever want deep-dive pages for specific projects later, we just add them here */}
             {/* <Route path='/project/:id' element={<ProjectDetail />} /> */}
+            <Route path='/blog' element={<Blog />} />
+            <Route path='/blog/:slug' element={<Article />} />
           </Routes>
         </main>
         <Footer />
