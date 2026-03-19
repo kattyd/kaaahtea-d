@@ -1,35 +1,65 @@
 // src/pages/Article.jsx
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { blogPosts } from '../data/blogData';
+import { collection, query, where, getDocs } from 'firebase/firestore';
+import { db } from '../firebase'; // Talking to Firebase!
+import ReactMarkdown from 'react-markdown'; // Rendering Markdown!
 import '../styles/blog.css';
 
 const Article = () => {
-  // 1. Grab the slug from the URL
-  const { slug } = useParams();
+  const { slug } = useParams(); 
   
-  // 2. Find the matching post in our database
-  const post = blogPosts.find((p) => p.slug === slug);
+  // State for Firebase
+  const [post, setPost] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
-  // 3. Force the page to scroll to the top when it loads
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    const fetchSinglePost = async () => {
+      try {
+        const q = query(collection(db, "posts"), where("slug", "==", slug));
+        const querySnapshot = await getDocs(q);
+
+        if (!querySnapshot.empty) {
+          setPost(querySnapshot.docs[0].data());
+        } else {
+          setError(true); // 404 trigger
+        }
+      } catch (err) {
+        console.error("Error fetching article:", err);
+        setError(true);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchSinglePost();
   }, [slug]);
 
-  // 4. If someone types a bad URL, show a 404 error
-  if (!post) {
+  // --- RENDERING STATES ---
+
+  if (loading) {
     return (
-      <div className="page-padding" style={{ textAlign: 'center' }}>
+      <div className="page-padding" style={{ textAlign: 'center', marginTop: '5rem' }}>
+        <p className="font-typewriter text-large">DEVELOPING...</p>
+      </div>
+    );
+  }
+
+  if (error || !post) {
+    return (
+      <div className="page-padding" style={{ textAlign: 'center', marginTop: '5rem' }}>
         <h1 className="font-sans-heavy text-huge">404</h1>
         <p className="font-typewriter" style={{ marginBottom: '2rem' }}>FILE NOT FOUND IN ARCHIVE.</p>
-        <Link to="/blog" className="send-btn font-sans-heavy" style={{ textDecoration: 'none' }}>
+        <Link to="/blog" className="send-btn font-sans-heavy" style={{ textDecoration: 'none', display: 'inline-block' }}>
           ← RETURN TO DESK
         </Link>
       </div>
     );
   }
 
-  // 5. If we found the post, render the article!
   return (
     <div className="article-container page-padding">
       <Link to="/blog" className="back-link font-typewriter">
@@ -42,7 +72,7 @@ const Article = () => {
           <h1 className="article-title font-sans-heavy">{post.title}</h1>
           
           <div className="blog-tags">
-            {post.tags.map(tag => (
+            {post.tags && post.tags.map(tag => (
               <span key={tag} className="tech-sticker">{tag}</span>
             ))}
           </div>
@@ -51,9 +81,12 @@ const Article = () => {
         <div className="article-divider"></div>
 
         <div className="article-body font-typewriter">
-          {/* We are reusing that huge drop-cap from your Dossier bio! */}
-          <span className="drop-cap">{post.content.charAt(0)}</span>
-          {post.content.substring(1)}
+          {/* Using the fixed post.content and wrapping it in ReactMarkdown */}
+          {post.content && (
+            <ReactMarkdown>
+                {post.content}
+            </ReactMarkdown>
+          )}
         </div>
       </article>
     </div>

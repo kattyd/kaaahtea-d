@@ -108,12 +108,24 @@
   margin: 3rem 0;
 }
 
-.article-body {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #333;
+/* Target the first letter of the first paragraph in the article body */
+.article-body p:first-of-type::first-letter {
+  font-family: 'Inter', sans-serif; /* Use your heavy sans-serif font */
+  font-size: 4rem;
+  font-weight: 900;
+  float: left;
+  line-height: 1;
+  margin-right: 0.5rem;
+  color: #d1495b; /* Your editorial red */
 }
 
-.article-body p {
-  margin-bottom: 1.5rem;
+/* Add a little spacing to your markdown elements */
+.article-body h1, .article-body h2, .article-body h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.article-body a {
+  color: #d1495b;
 }

@@ -18,7 +18,7 @@ const projectsData = [
     title: "Guldspy",
     category: "code",
     description: "A full-stack web application designed for seamless user experiences.",
-    tech: ["React", "Node.js", "MongoDB"],
+    tech: ["React", "Node.js", "CSS"],
     link: "https://guldspy.vercel.app/",
     image: guldspy, 
   },

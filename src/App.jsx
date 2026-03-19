@@ -24,6 +24,7 @@ function App() {
         they become universal across your whole site. One identity! 
       */}
       <div className="app-wrapper">
+        <div className="film-grain"></div>
         <CustomCursor />
         <Navbar />
         <main>

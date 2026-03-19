@@ -17,13 +17,22 @@ const Dossier = () => {
       
       <div className="bio-column">
         <p className="bio-text">
-          <span className="drop-cap">A</span>s a self-taught full-stack developer and a multimedia creative, I exist in the space where logic meets art. Whether I'm building clean, thoughtful web applications or telling stories through essays and podcasts, my goal is always the same: <span className="highlight-text">to craft engaging, human-centric experiences.</span>
-        </p>
-        <p className="bio-text mt-3">
-          I'm drawn to storytelling in all its forms. When I'm not writing code, you can find me exploring digital culture, editing audio, or hunting down the perfect typography combination.
-        </p>
-        
-        <div className="scribble-signature font-handwritten">stay curious, Katrina</div>
+  <span className="drop-cap">I</span> build for the internet and document the process as I go. 
+  My work moves between code, writing, and video, <span className="highlight-text">usually all at once</span>.
+</p>
+
+<p className="bio-text mt-3">
+  I’m currently developing a literary project, creating content around it, 
+  and building the kind of digital experiences I wish existed. 
+  I care about how things work, but more importantly, how they feel to move through.
+</p>
+
+<p className="bio-text mt-3">
+  I’m open to working on projects that sit within this space, especially ones that value 
+  thoughtful execution and a strong sense of direction.
+</p>
+
+<div className="scribble-signature font-handwritten">stay curious, Katrina</div>
       </div>
 
       <div className="stack-column">
