@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import '../styles/navbar.css'; // Adjust path if your css is elsewhere!
 
 const Navbar = () => {
-  const [isDarkroom, setIsDarkroom] = useState(false);
+  // const [isDarkroom, setIsDarkroom] = useState(false);
 
-  const toggleDarkroom = () => {
-    setIsDarkroom(!isDarkroom);
-    document.body.classList.toggle('darkroom-mode');
-  };
+  // const toggleDarkroom = () => {
+  //   setIsDarkroom(!isDarkroom);
+  //   document.body.classList.toggle('darkroom-mode');
+  // };
 
   return (
     <header className="scrapbook-header">
@@ -25,9 +25,9 @@ const Navbar = () => {
           <li><a href="/blog" className="nav-item">BLOG</a></li>
           <li><a href="/#contact" className="nav-item highlight-link">DROP A LINE</a></li>
           <li>
-            <button onClick={toggleDarkroom} className="darkroom-toggle font-typewriter">
+            {/* <button onClick={toggleDarkroom} className="darkroom-toggle font-typewriter">
               {isDarkroom ? '☀ LIGHTS ON' : '☾ DARKROOM'}
-            </button>
+            </button> */}
           </li>
         </ul>
       </nav>
