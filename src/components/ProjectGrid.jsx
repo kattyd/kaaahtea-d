@@ -19,7 +19,7 @@ const projectsData = [
     category: "code",
     description: "A web application that allows users to explore the Bitcoin blockchain, view transactions, and see Bitcoin analytics.",
     tech: ["React", "CSS", "Zustand", "Mempool API", "CoinGecko API"],
-    link: "#",
+    link: "https://bit-dash.vercel.app/",
     image: bitdash,
   },
   {
