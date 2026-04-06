@@ -37,7 +37,9 @@ const Hero = () => {
           I build clean web experiences and tell stories through code, video, and writing. Based in Jos.
         </p>
 
-        <button className="scribble-btn">Explore my work ↗</button>
+        <button className="scribble-btn">
+          <a href="#projects">Explore my work ↗</a>
+          </button>
       </div>
 
       <div className="hero-visuals">

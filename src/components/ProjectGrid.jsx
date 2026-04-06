@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/project-grid.css';
+import bitdash from "../assets/bitdash.webp";
 import guldspy from "../assets/guldpsy.webp";
 import budgettoire from "../assets/budgettoire.webp";
 import litdao from "../assets/litdao.webp";
@@ -8,16 +9,24 @@ import brainwave from "../assets/brainwave.webp";
 import mascot from "../assets/mascot.webp";
 import search from "../assets/search.webp";
 import profile from "../assets/profile.webp";
-import Navbar from "../components/Navbar";
-import { title } from 'framer-motion/client';
+
 
 // You can eventually move this data to a separate file, but keeping it here for now!
 const projectsData = [
   {
+    id: 0,
+    title: "Bitcoin Blockchain Explorer",
+    category: "code",
+    description: "A web application that allows users to explore the Bitcoin blockchain, view transactions, and see Bitcoin analytics.",
+    tech: ["React", "CSS", "Zustand", "Mempool API", "CoinGecko API"],
+    link: "#",
+    image: bitdash,
+  },
+  {
     id: 1,
     title: "Guldspy",
     category: "code",
-    description: "A full-stack web application designed for seamless user experiences.",
+    description: "A full-stack web application designed for minting my Guldspy tokens to your testnet wallet on the Solana blockchain.",
     tech: ["React", "Node.js", "CSS"],
     link: "https://guldspy.vercel.app/",
     image: guldspy, 
@@ -92,7 +101,7 @@ const ProjectGrid = ({ category }) => {
   const filteredProjects = projectsData.filter(project => project.category === category);
 
   return (
-    <div className="project-grid">
+    <div className="project-grid" id='projects'>
       {filteredProjects.map((project, index) => (
         <a href={project.link} className={`project-card card-tilt-${index % 3}`} key={project.id}>
           {/* The Tape Graphic */}

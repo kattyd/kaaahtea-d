@@ -121,7 +121,10 @@
   color: #f4f1eb;
   transform: translateY(-3px);
 }
-
+.scribble-btn a {
+  color: inherit;
+  text-decoration: none;
+}
 /* --- POLAROID --- */
 .polaroid {
   background: #fff;
